@@ -1,7 +1,7 @@
-create table publisher (id integer primary key, name text, country text);
+CREATE TABLE publisher (id INTEGER PRIMARY KEY, name TEXT, country TEXT);
 
-create table books (id integer primay key ,title text, publisher integer REFERENCES publisher(id));
+CREATE TABLE books (id INTEGER PRIMARY KEY, title TEXT, publisher INTEGER REFERENCES publisher(id));
 
-create table subject (id integer primary key ,name text);
+CREATE TABLE subjects ( id INTEGER PRIMARY KEY, name TEXT);
 
-create table books_subjects (book integer REFERENCES books(id), integer REFERENCES subjects(id));
+CREATE TABLE books_subjects ( book INTEGER REFERENCES books(id), subject INTEGER REFERENCES subjects(id));
